@@ -26,6 +26,20 @@ stream {
 }
 EOL
 
+mkdir -p /etc/wireguard
+touch /etc/wireguard/wg0.conf
+
+cat > /etc/wireguard/wg0.conf << EOL
+[Interface]
+Address = 10.99.0.1/24
+ListenPort = ${WG_PORT}
+PrivateKey = ${WG_PRIVATE}
+
+[Peer]
+PublicKey = ${WG_PUBLIC}
+AllowedIPs = 10.99.0.2/32
+EOL
+
 wg-quick up /etc/wireguard/wg0.conf
 
 nginx -g "daemon off;"

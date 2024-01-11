@@ -4,11 +4,12 @@ services:
     build: .
     cap_add:
      - NET_ADMIN
-    volumes:
-     - ./wireguard:/etc/wireguard
     environment:
      - PORT=5000
      - SERVER=10.99.0.2:3004
+     - WG_PORT=51820
+     - WG_PRIVATE=MAoyoyZ4gUzITNmhsfRkCdrSJCJIx/2hY0KCMCWfa10=
+     - WG_PUBLIC=+QdhO9EJ85fYPdH3JrWQDnuv7rDOG/cW6sgPfmggHxg=
     ports:
      - 51820:51820/udp
      - 0.0.0.0:5000:5000
