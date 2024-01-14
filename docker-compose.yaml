@@ -6,7 +6,7 @@ services:
      - NET_ADMIN
     environment:
      - PORT=5000
-     - SERVER=10.99.0.2:3004
+     - SERVER=10.99.0.2
      - WG_PORT=51820
      - WG_PRIVATE=MAoyoyZ4gUzITNmhsfRkCdrSJCJIx/2hY0KCMCWfa10=
      - WG_PUBLIC=+QdhO9EJ85fYPdH3JrWQDnuv7rDOG/cW6sgPfmggHxg=

@@ -21,7 +21,7 @@ events {
 stream {
     server {
         listen ${PORT};
-        proxy_pass ${SERVER};
+        proxy_pass ${SERVER}:10000;
     }
 }
 EOL
